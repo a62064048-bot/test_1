@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Контрольная работа — JavaScript</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <header class="page-header">
+      <p class="eyebrow"></p>
+      
+      <p class="subtitle"></p>
+    </header>
+
+    <section class="task">
+      <h2>Задание 1. Проверка строки на цифры</h2>
+      <p>Функция использует регулярное выражение <code>/^\d+$/</code>.</p>
+      <div class="inline-controls">
+        <input id="digitsInput" type="text" inputmode="numeric" placeholder="Например, 12345" aria-label="Строка для проверки">
+        <button id="checkDigitsButton" type="button">Проверить</button>
+      </div>
+      <p id="digitsResult" class="result" aria-live="polite">Примеры также выводятся в Console.</p>
+    </section>
+
+    <section class="task">
+      <h2>задание 2. Сообщение каждую секунду</h2>
+      <p>При запуске интервала сообщение «Прошла секунда» выводится в Console каждую секунду.</p>
+      <div class="inline-controls">
+        <button id="startMessageButton" type="button">Запустить</button>
+        <button id="stopMessageButton" class="secondary" type="button">Остановить</button>
+      </div>
+      <p id="messageStatus" class="result" aria-live="polite">Интервал запускается автоматически при загрузке страницы.</p>
+    </section>
+
+    <section class="task">
+      <h2>Задание 3. Числа от 1 до 10</h2>
+      <p>Числа выводятся в Console с интервалом в одну секунду. После числа 10 интервал останавливается.</p>
+      <button id="startCountButton" type="button">Запустить отсчёт заново</button>
+      <p id="countStatus" class="result" aria-live="polite">Отсчёт запускается автоматически при загрузке страницы.</p>
+    </section>
+
+    <section class="task">
+      <h2>Задание 4. Переключение фона через classList</h2>
+      <p>Нажми на блок: цвет включится. Нажми ещё раз: цвет уберётся. Используется <code>classList.toggle()</code>.</p>
+      <div id="colorBox" class="color-box" role="button" tabindex="0" aria-pressed="false">Нажми на меня</div>
+    </section>
+
+    <section class="task">
+      <h2>Задание 5. GET-запрос с помощью XMLHttpRequest</h2>
+      <p>Страница получает JSON из локального файла <code>data.json</code> и выводит данные в Console и ниже.</p>
+      <button id="loadJsonButton" type="button">Загрузить JSON ещё раз</button>
+      <p id="jsonStatus" class="result" aria-live="polite">Загрузка JSON…</p>
+      <pre id="jsonOutput" class="json-output">Ожидание ответа…</pre>
+    </section>
+
+    <footer>Файлы проекта: <code>index.html</code>, <code>style.css</code>, <code>script.js</code>, <code>data.json</code>.</footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
